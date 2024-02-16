@@ -98,6 +98,7 @@ body{
     bottom: 0;
     width: 17vw;
     background-color:var(--Nav-back-color);
+    transition: background-color 0.8s ease;
     overflow: hidden;
     border-right: 1px solid var(--nav-boundary);
     z-index: 18;
