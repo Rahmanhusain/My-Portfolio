@@ -1,0 +1,368 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Kaushan+Script&family=Noto+Sans+JP:wght@500&family=Poppins:ital,wght@0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+:root {
+    --colored-text-color:#33CC66;
+    --Nav-back-color: #f8f8f8;
+    --body-back-color:#FFFFFF;
+    --text-color: black;
+    --bar-outer-color: rgb(238, 192, 243);
+    --shadow: rgba(0, 0, 0, 0.3);
+    --input-back-color: white;
+    --input-boundary: rgba(192, 192, 192, 0.4);
+    --nav-boundary: rgba(192, 192, 192, 0.3);
+    --toggle-btn-back-color: white;
+    --styler-back-color: hsl(140, 60%, 80%);
+    --purple: rgb(198, 17, 218);
+    --voilet: #8100DE;
+    --orange: #FFCC00;
+    --red: #FF0033;
+    --green: #29a352;
+    --blue: #3333FF;
+    /*stylesr colors*/
+    --purples: hsl(294, 86%, 80%);
+    --voilets: hsl(275, 100%, 80%);
+    --oranges: hsl(48, 100%, 80%);
+    --reds: hsl(348, 100%, 80%);
+    --greens: hsl(140, 60%, 90%);
+    --blues: hsl(240, 100%, 90%);
+    --text-color-for-currection: #636769;
+    --shadowt: rgba(0, 0, 0, 0.3);
+
+    /* stylers colors end*/
+    /* dark modecolors*/
+    --body-back-color-dark: #191d2b;
+    --text-color-dark: #FFFFFF;
+    --Nav-back-color-dark: hsl(0, 0%, 25%);
+    /* dark mode colors end*/
+}
+
+  
+
+/*dark mode start*/
+.dark{
+    --Nav-back-color: hsl(227, 26%, 17%);
+    --body-back-color: #191d2b;
+    --text-color: #ededfc;
+    --nav-boundary: rgba(0, 0, 0, 0.3);
+    --shadow: rgba(0, 0, 0, 0.9);
+    --input-back-color: hsl(227, 26%, 25%);
+    --input-boundary: none;
+    --text-color-for-currection: #a6a6a6;
+}
+/* dark mode end*/
+
+
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: color 0.8s ease, background-color 0.8s ease, border-color 0.8s ease;
+}
+
+p,h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder !important;
+}
+
+i {
+    transition: transform 0.3s ease;
+}
+image{
+    transition: ease 0.8s;
+}
+html{
+    scroll-behavior: auto;
+}
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--body-back-color) ;
+}
+.main-container{
+    display: flex;
+    width: 100%;
+}
+.main-container .nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 17vw;
+    background-color:var(--Nav-back-color);
+    overflow: hidden;
+    border-right: 1px solid var(--nav-boundary);
+    z-index: 18;
+   
+}
+.main-container .content{
+    position: relative;
+    margin-left: 17vw;
+    width: 100%;
+    display: block;
+    top: 0;
+    
+}
+.main-container .nav ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    
+}
+.main-container .nav ul li{
+    margin:22px;
+    border-bottom:1px solid var(--colored-text-color);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 15px;
+    font-weight: bold;
+   
+    font-family: 'Open Sans', sans-serif;
+
+}
+.main-container .nav ul li a{
+    color: var(--text-color);
+} 
+.main-container .nav ul li.active a {
+    color: var(--colored-text-color); /* Change the color of the active link */
+  }
+.main-container .nav .logodiv{
+    position: absolute;
+    top: 60px;
+}
+.main-container .nav .logodiv .logo{
+    font-size: 25px;
+    font-family: 'Kalam', cursive;
+    color: var(--text-color);
+    
+}
+.main-container .nav .logodiv .logo::before{
+    content: ' ';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-left: 3.5px solid var(--colored-text-color);
+    border-bottom: 3.5px solid var(--colored-text-color);
+    border-top: 3.5px solid transparent;
+    border-right: 3.5px solid transparent;
+    top: 20px;
+    left: -14px;
+    transition: border-color 0.8s ease;
+
+}
+.main-container .nav .logodiv .logo::after{
+    content: ' ';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-left: 3.5px solid transparent;
+    border-bottom: 3.5px solid transparent;
+    border-right: 3.5px solid var(--colored-text-color);
+    border-top: 3.5px solid var(--colored-text-color);
+    bottom: 25px;
+    right: -12px;
+    transition: border-color 0.8s ease;
+}
+/* nobile responsive nav button start*/
+.outtbtn{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    top: 0;
+    background-color: var(--Nav-back-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 19;
+}
+.togglebtn{
+    position: fixed;
+    margin-left: 20px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: ease 0.2s;
+    z-index: 19;
+}
+.tb{
+    width: 28px;
+    height: 3px;
+    background-color: var(--colored-text-color);
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+   
+}
+#l1.toganim{
+    position: absolute;
+    transform: rotate(45deg);
+    transition: ease 0.25s;
+    transition-delay: 0.15s;
+
+}
+#l2.toganim{
+    display: none;
+}
+#l3.toganim{
+    position: absolute;
+    transform: rotate(-45deg);
+    transition: ease 0.25s;
+    transition-delay: 0.15s;
+}
+.togglebtn.toganim{
+    transform: translateX(57vw) !important;
+    transition: ease 0.25s;
+    margin-left: 5px;
+
+}
+.navanim{
+    transition: ease 0.25s;
+    transform: translateX(0) !important;
+}
+.hide{
+   display: none;
+}
+/* nobile responsive nav button end*/
+
+/* nobile responsive nav Stylers start*/
+.Stylersout{
+    position: fixed;
+     width: fit-content;
+    height: fit-content;
+    right: 0;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    box-sizing: border-box;
+    z-index: 20;
+}
+.icons{
+    
+    background-color: var(--styler-back-color);
+    border-radius: 50%;
+    padding: 15px;
+    margin-right: 20px;
+}
+.icons i{
+    font-size: 28px;
+    cursor: pointer;
+    align-self: center;
+    transform-origin: center;
+    will-change: transform;
+    border-radius: 50%;
+    background-color: var(--styler-back-color);
+    text-shadow: 2px 2px 3px var(--shadowt);
+}
+.icons:nth-child(2) i{
+   transition: transform 0.8s ease;
+   will-change: transform;
+   transform-origin: center;
+}
+.icons:nth-child(2) i.rotate{
+    transform: rotate(-70deg);
+}
+
+.icons:nth-child(1) i{
+    transition: transform 0.8s ease;
+    will-change: transform;
+    transform-origin: center;
+ }
+ .icons:nth-child(1) i.rotate{
+     transform: rotatey(180deg);
+ }
+
+
+ .coloroptions{
+    position: fixed;
+    width: 50px;
+    height:fit-content;
+    right: 22px;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: height 0.8s ease;
+    
+ }
+ 
+ .colors{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .colors:nth-child(1){
+    margin-top: 8px;
+ }
+
+ #green{
+    transform: translateY(-45px);
+    background-color: var(--green);
+    transition-delay: 0.5s;
+ }
+#violet{
+    transform: translateY(-88px);
+    background-color: var(--voilet);
+    transition-delay: 0.4s;
+}
+#orange{
+    transform: translateY(-131px);
+    transition-delay: 0.3s;
+    background-color: var(--orange);
+
+}
+#red{
+    transform: translateY(-174px);
+    transition-delay: 0.2s;
+    background-color: var(--red);
+    
+}
+#purple{
+    transform: translateY(-217px);
+    transition-delay: 0.1s;
+    background-color: var(--purple) ;
+}
+#blue{
+    transform: translateY(-260px);
+    background-color: var(--blue);
+}
+.cin{
+    width: 1.6em;
+    height: 1.6em;
+    align-self: center;
+    border-radius: 50%;
+   
+}
+.selected{
+    background-color: var(--body-back-color) !important;
+    border: 3px solid var(--text-color);
+}
+
+ .add{
+    transform: translateY(0) !important;
+ }
+ 
+/* nobile responsive nav Stylers End*/
+
+

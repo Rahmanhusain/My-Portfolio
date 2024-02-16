@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahman's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  
+    <div class="main-container">
+        <div class="nav">
+           <div class="logodiv"><div class="logo">Portfolio</div></div>
+           <ul id="navbar">
+            <li class="navitems active" id="home"><a href="#Home" onclick="setActiveNav(0,true)"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li class="navitems" id="about"><a href="#About" onclick="setActiveNav(1,true)"><i class="fa-solid fa-address-card"></i> About</a></li>
+            <li class="navitems" id="projects"><a href="#Projects" onclick="setActiveNav(2,true)"><i class="fa-solid fa-briefcase"></i> Projects</a></li>
+            <li class="navitems" id="contact"><a href="#Contact" onclick="setActiveNav(3,true)"><i class="fa-solid fa-phone"></i> Contact</a></li>
+           </ul>
+        </div>
+        <div class="content">
+            <!--home section start-->
+           <section id="Home" class="sections">
+           <div class="homecontainer Anim">
+            <div class="Hrow">
+              <div class="info">
+                <h2 class="hs"><span class="hs">Hello</span>, My name is <span class="hs">Rahman Husain</span></h2>
+                
+                <h3 class="hs">I' m a  <span class="hs">Computer Science Enthusiast</span></h3>
+                <p class="hs">Hello Explorers, I'm Rahman Husain, a passionate and dedicated 
+                  computer science Undergraduate student on a journey to unravel the mysteries of code and technology. <br>
+                  <br>
+                  I'm a Computer Science student from Delhi, India and I am always ready for challanges!
+                </p>
+                <br>
+                <button class="hs" id="btnknow" onclick="setActiveNav(1,false)">More About Me</button>
+               </div>
+               <div class="photo">
+                <div id="myphotodiv2">
+                     <div id="myphotodiv">
+                     <img src="images/Rahman photo.png" alt="" id="myphoto">
+                     </div>
+                </div>
+               </div>
+            </div>
+            
+           </div>
+           </section>
+            <!--home section end-->
+
+            <!--About Section Start-->
+            <section id="About" class="sections hide">
+              <div class="aboutcontainer Anim">
+                  <div id="Atitlediv">
+                    <div class="About-title"><h2>About</h2></div>
+                  </div>
+                  <div class="about-content">
+                    <h2>Hi, I'm <span class="hs">Rahman Husain</span> and  <span class="hs">Computer Science Enthusiast</span></h2>
+                    <p class="about-text" style="color: var(--text-color-for-currection);">I'm Rahman Husain. I'm 19 years old and I'm a Computer Science Undergraduate(B.tech) student from 
+                      Guru Gobind Singh Indraprastha University(GGSIPU), Guru Tegh Bhadur 4<sup heigh>th</sup> Centenary Engineering College(GTB4CEC) 
+                      Delhi, India.
+                      <br>
+                      <br>
+                      I'm a passionate computer science student, navigating the exciting world of technology and programming. 
+                      My journey involves exploring the principles, theories, and practical applications that form the backbone of computing.
+                      <br>
+                      <br>
+                      Throughout my academic journey, I've gained hands-on experience in coding languages like Java, C++, and others.
+                      I've also dived into the fascinating realm of computer networks, databases and Maven architypes.
+                    </p>
+                  </div>
+                  <br>
+                  <br>
+                  <div class="rowinfo_skill">
+                    <div class="info-container">
+                      <div class="info-boundry">
+                       <div style="position: relative; width: fit-content;"><h2 style="color: var(--text-color);">Personal Info</h2></div>
+                       <!--info start-->
+                       <div id="row_infoitem">
+                          <div class="info-item">
+                            <p>Name : <span>Rahman Husain</span></p>
+                          </div>
+                          <div class="info-item">
+                            <p>City : <span>Delhi ( India )</span></p>
+                          </div>
+                          <div class="info-item">
+                            <p>Birthday : <span>03 March 2005</span></p>
+                          </div>
+                          <div class="info-item">
+                            <p>Email : <span style="word-wrap: break-word; word-break: break-all;">rahmanhusain899@gmail.com</span></p>
+                          </div>
+                          <div class="info-item">
+                            <p>Age : <span>19 years</span></p>
+                          </div>
+                          <div class="info-item">
+                            <p>Phone : <span>+91-9205582846</span></p>
+                          </div>
+                          <div class="info-item">
+                            <p>Degree : <span>B.tech(CSE), Diploma(CSE)</span></p>
+                          </div>
+                          <div class="info-item">
+                            <p>Freelance : <span>Available</span></p>
+                          </div>
+                        </div>
+                          <!--info end-->
+                      <a href="Resumerahman.pdf" target="_blank" rel="noopener noreferrer"><button >See my CV</button></a>
+                      <button onclick="setActiveNav(3,false)">Hire me</button>
+                      </div>
+                    </div>
+                    <!--skill start-->
+                    <div class="skill-container">
+                      <div style="position: relative; width: fit-content;"><h2 style="color: var(--text-color);">Skills  </h2></div>
+                        <!--skill content start-->
+                        <div class="skillrow">
+                          <div class="skill-item">
+                            <div class="item-name">
+                             <p style="color: var(--text-color); font-weight: bold; max-width: 70%;">Java</p>
+                             <p style="color: var(--text-color-for-currection);" id="item-percent">81%</p>
+                            </div>
+                            <div class="item-bars">
+                            <div style="max-width: 81%; background-color: var(--colored-text-color);" class="item-quantity"></div>
+                            </div>
+                          </div>
+                          <div class="skill-item">
+                            <div class="item-name">
+                             <p style="color: var(--text-color); font-weight: bold; max-width: 70%;">Javafx</p>
+                             <p style="color: var(--text-color-for-currection);" id="item-percent">75%</p>
+                            </div>
+                            <div class="item-bars">
+                            <div style="max-width: 75%; background-color: var(--colored-text-color);" class="item-quantity"></div>
+                            </div>
+                          </div>
+                          <div class="skill-item">
+                            <div class="item-name">
+                             <p style="color: var(--text-color); font-weight: bold; max-width: 70%;">C++</p>
+                             <p style="color: var(--text-color-for-currection);" id="item-percent">75%</p>
+                            </div>
+                            <div class="item-bars">
+                            <div style="max-width: 75%; background-color: var(--colored-text-color);" class="item-quantity"></div>
+                            </div>
+                          </div>
+                          <div class="skill-item">
+                            <div class="item-name">
+                             <p style="color: var(--text-color); font-weight: bold; max-width: 70%;">HTML</p>
+                             <p style="color: var(--text-color-for-currection);" id="item-percent">80%</p>
+                            </div>
+                            <div class="item-bars">
+                            <div style="max-width: 80%; background-color: var(--colored-text-color);" class="item-quantity"></div>
+                            </div>
+                          </div>
+                          <div class="skill-item">
+                            <div class="item-name">
+                             <p style="color: var(--text-color); font-weight: bold; max-width: 70%;">CSS</p>
+                             <p style="color: var(--text-color-for-currection);" id="item-percent">79%</p>
+                            </div>
+                            <div class="item-bars">
+                            <div style="max-width: 79%; background-color: var(--colored-text-color);" class="item-quantity"></div>
+                            </div>
+                          </div>
+                          <div class="skill-item">
+                            <div class="item-name">
+                             <p style="color: var(--text-color); font-weight: bold; max-width: 70%;">JavaScript</p>
+                             <p style="color: var(--text-color-for-currection);" id="item-percent">73%</p>
+                            </div>
+                            <div class="item-bars">
+                            <div style="max-width: 73%; background-color: var(--colored-text-color);" class="item-quantity"></div>
+                            </div>
+                          </div>
+                          <div class="skill-item">
+                            <div class="item-name">
+                             <p style="color: var(--text-color); font-weight: bold; max-width: 70%;">SQL</p>
+                             <p style="color: var(--text-color-for-currection);" id="item-percent">81%</p>
+                            </div>
+                            <div class="item-bars">
+                            <div style="max-width: 81%; background-color: var(--colored-text-color);" class="item-quantity"></div>
+                            </div>
+                          </div>
+                          <div class="skill-item">
+                            <div class="item-name">
+                             <p style="color: var(--text-color); font-weight: bold; max-width: 70%;">Maven Architypes</p>
+                             <p style="color: var(--text-color-for-currection);" id="item-percent">70%</p>
+                            </div>
+                            <div class="item-bars">
+                            <div style="max-width: 70%; background-color: var(--colored-text-color);" class="item-quantity"></div>
+                            </div>
+                          </div>
+                          <div class="skill-item">
+                            <div class="item-name">
+                             <p style="color: var(--text-color); font-weight: bold; max-width: 70%;">Android Development</p>
+                             <p style="color: var(--text-color-for-currection);" id="item-percent">70%</p>
+                            </div>
+                            <div class="item-bars">
+                            <div style="max-width: 70%; background-color: var(--colored-text-color);" class="item-quantity"></div>
+                            </div>
+                          </div>
+                          <div class="skill-item">
+                            <div class="item-name">
+                             <p style="color: var(--text-color); font-weight: bold; max-width: 70%;">Shell Scripting</p>
+                             <p style="color: var(--text-color-for-currection);" id="item-percent">75%</p>
+                            </div>
+                            <div class="item-bars">
+                            <div style="max-width: 75%; background-color: var(--colored-text-color);" class="item-quantity"></div>
+                            </div>
+                          </div>
+                          <div class="skill-item">
+                            <div class="item-name">
+                             <p style="color: var(--text-color); font-weight: bold; max-width: 70%;">Firebase</p>
+                             <p style="color: var(--text-color-for-currection);" id="item-percent">70%</p>
+                            </div>
+                            <div class="item-bars">
+                            <div style="max-width: 70%; background-color: var(--colored-text-color);" class="item-quantity"></div>
+                            </div>
+                          </div>
+                          <div class="skill-item">
+                            <div class="item-name">
+                             <p style="color: var(--text-color); font-weight: bold; max-width: 70%;">Microsoft Office</p>
+                             <p style="color: var(--text-color-for-currection);" id="item-percent">74%</p>
+                            </div>
+                            <div class="item-bars">
+                            <div style="max-width: 74%; background-color: var(--colored-text-color);" class="item-quantity"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--skill content end-->
+                    </div>
+                    <!--skill end-->
+                  </div>
+                  <div class="rowedu_course">
+                    <div class="educontainer">
+                      <div style="position: relative; width: fit-content;"><h2 class="h3heading" style="color: var(--text-color);">Education</h2></div>
+                      <div class="educontentoutdiv">
+                          <div class="itemcontentdiv">
+                            <div class="itemcontent">
+                              <div class="circledot"></div>
+                              <p class="date" style="color: var(--colored-text-color);"><i class="fa-solid fa-calendar"></i> 2023 - 2026 (Present)</p>
+                              <h3 style="color: var(--text-color);">B.Tech Computer Science Engineering</h3>
+                              <p style="color: var(--text-color-for-currection);">Pursuing B.Tech (Lateral Entry) from Guru Gobind Singh Indraprastha University(GGSIPU) ,
+                                 Guru Tegh Bhadur 4th Centenary Engineering College(GTB4CEC) Delhi, India.</p>
+                            </div>
+                            <div class="itemcontent">
+                              <div class="circledot"></div>
+                              <p class="date" style="color: var(--colored-text-color);"><i class="fa-solid fa-calendar" ></i> 2023 - 2026</p>
+                              <h3 style="color: var(--text-color);">Diploma in Computer Engineering</h3>
+                              <p style="color: var(--text-color-for-currection);">Passed Diploma fromn Guru Nanak Dev Institute of Technology, Board Of Technical Education (BTE)
+                               Delhi, India with 80.03% Marks</p>
+                            </div>
+                            <div class="itemcontent">
+                              <div class="circledot"></div>
+                              <p class="date" style="color: var(--colored-text-color);"><i class="fa-solid fa-calendar" ></i> 2023 - 2026</p>
+                              <h3 style="color: var(--text-color);">10th Class</h3>
+                              <p style="color: var(--text-color-for-currection);">Passed class 10th from Parag Bharati Model School , Central Board Of Secondary Education with 63.2% Marks.</p>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="coursecontainer">
+                      <div style="position: relative; width: fit-content;"><h2 class="h3heading" style="color: var(--text-color);">Experience</h2></div>
+                      <div class="educontentoutdiv">
+                        <div class="itemcontentdiv">
+                          <div class="itemcontent">
+                            <div class="circledot"></div>
+                            <p class="date" style="color: var(--colored-text-color);"><i class="fa-solid fa-calendar"></i>  2023</p>
+                            <h3 style="color: var(--text-color);">Internship by PHN Technology</h3>
+                            <p style="color: var(--text-color-for-currection);">Successfully completed (Intern ID- 112912)
+                              the Internship in Web Development presented by PHN Technology Pvt Ltd, Pune. <br>Throughout the program I got valuable hands-on 
+                              experience and practical knowledg in Web Development. <br><br>
+                              <a href="PHN web dev internship certificate.pdf" style="color: var(--colored-text-color); text-decoration: underline;" target="_blank">See Certificate...</a></p>
+                          </div>
+                          <div class="itemcontent">
+                            <div class="circledot"></div>
+                            <p class="date" style="color: var(--colored-text-color);"><i class="fa-solid fa-calendar" ></i>  2023</p>
+                            <h3 style="color: var(--text-color);">Android Development Workshop</h3>
+                            <p style="color: var(--text-color-for-currection);">Attended a Two days Advance Workshop on Android Development presented by PHN Technology Pvt Ltd, Pune. 
+                              <br><br><a href="Android development.pdf" style="color: var(--colored-text-color); text-decoration: underline;" target="_blank">See Certificate...</a></p>
+                          </div>
+                          <div class="itemcontent">
+                            <div class="circledot"></div>
+                            <p class="date" style="color: var(--colored-text-color);"><i class="fa-solid fa-calendar" ></i>  2022</p>
+                            <h3 style="color: var(--text-color);">Java Certificate Course</h3>
+                            <p style="color: var(--text-color-for-currection);">Successfully completed Certificate Course in programming language
+                              Java presented by Sololearn App. <br><br><a href="https://www.sololearn.com/certificates/CT-L0QXU5RE" style="color: var(--colored-text-color); text-decoration: underline;" target="_blank">See Certificate...</a></p>
+                          </div>
+                          <div class="itemcontent">
+                            <div class="circledot"></div>
+                            <p class="date" style="color: var(--colored-text-color);"><i class="fa-solid fa-calendar" ></i>  2022</p>
+                            <h3 style="color: var(--text-color);">Game Development with JavaScript</h3>
+                            <p style="color: var(--text-color-for-currection);">Successfully completed Certificate Course in Game Development with JavaScript presented by Sololearn App.
+                              <br><br><a href="https://www.sololearn.com/certificates/CT-EFEX8FQM" style="color: var(--colored-text-color); text-decoration: underline;" target="_blank">See Certificate...</a></p>
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+            </section>
+             <!--About Section End-->
+
+            <!--projects Section start-->
+        <section id="Projects" class="sections hide">
+          <div class="projects_conatiner Anim">
+            <div id="projectstitlediv">
+              <div class="projectstitle"><h2>Projects</h2></div>
+            </div>
+            <div class="Projectsrow">
+              <div style="width: 100%; text-align: center;">
+                <h3 style="color: var(--text-color); font-weight: bold;">Here is some of my work that I've done
+                in various programming languages.</h3></div>
+                 <div class="rowcards">
+
+                  <div class="cards">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <div style="width: fit-content; height: fit-content;">
+                          <img id="app1" class="logo" src="images/application.png" alt="">
+                          <div style="width: 100%; text-align: center; padding-left: 5px; padding-right: 5px;">
+                            <h3 style="color: var(--text-color-for-currection); font-weight: bold; padding-left: 10px; padding-right: 10px;">Smart School Management Desktop Application</h3></div>
+                        </div>
+                      </div>
+                      <div class="flip-card-back">
+                        <div style="width: fit-content; height: fit-content;">
+                         <a class="logo" href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+                          <div style="width: 100%; text-align: center; padding-left: 5px; padding-right: 5px;">
+                            <h3 style="color: var(--text-color-for-currection); font-weight: bold;">See Project Code</h3></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="cards">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <div style="width: fit-content; height: fit-content;">
+                          <img id="app2" class="logo" src="images/application.png" alt="">
+                          <div style="width: 100%; text-align: center; padding-left: 10px; padding-right: 10px;">
+                            <h3 style="color: var(--text-color-for-currection); font-weight: bold;">Smart Student Management Desktop Application</h3></div>
+                        </div>
+                      </div>
+                      <div class="flip-card-back">
+                        <div style="width: fit-content; height: fit-content;">
+                          <a class="logo" href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+                           <div style="width: 100%; text-align: center; padding-left: 5px; padding-right: 5px;">
+                             <h3 style="color: var(--text-color-for-currection); font-weight: bold;">See Project Code</h3></div>
+                         </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="cards">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <div style="width: fit-content; height: fit-content;">
+                          <img id="app3" class="logo" src="images/music.png" alt="" style="border-radius: 50%;">
+                          <div style="width: 100%; text-align: center; padding-left: 10px; padding-right: 10px;">
+                            <h3 style="color: var(--text-color-for-currection); font-weight: bold;">Online Music Player Mobile Application</h3></div>
+                        </div>
+                      </div>
+                      <div class="flip-card-back">
+                        <div style="width: fit-content; height: fit-content;">
+                          <a class="logo" href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+                           <div style="width: 100%; text-align: center; padding-left: 5px; padding-right: 5px;">
+                             <h3 style="color: var(--text-color-for-currection); font-weight: bold;">See Project Code</h3></div>
+                         </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="cards">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <div style="width: fit-content; height: fit-content;">
+                          <img id="app4" class="logo" src="images/Calculator.png" alt="">
+                          <div style="width: 100%; text-align: center; padding-left: 10px; padding-right: 10px;">
+                            <h3 style="color: var(--text-color-for-currection); font-weight: bold;">Calculator Mobile Application</h3></div>
+                        </div>
+                      </div>
+                      <div class="flip-card-back">
+                        <div style="width: fit-content; height: fit-content;">
+                          <a class="logo" href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+                           <div style="width: 100%; text-align: center; padding-left: 5px; padding-right: 5px;">
+                             <h3 style="color: var(--text-color-for-currection); font-weight: bold;">See Project Code</h3></div>
+                         </div>
+                      </div>
+                    </div>
+                  </div>
+                 </div>
+            </div>
+          </div>
+          </section>
+           <!--projects Section end-->
+  
+            <!--contact Section start-->
+          <section id="Contact" class="sections hide">
+             <div class="Contactconatiner Anim">
+                <div id="Contacttitlediv">
+                  <div class="Contacttitle"><h2>Contacts</h2></div>
+                </div>
+                <div class="quetion">
+                  <h2 style="color: var(--colored-text-color); font-weight: bold;">Have You Any Quetions ?</h2>
+                  <p style="color: var(--text-color); font-weight: bold;">I'M AT YOURS SERVICE</p>
+                </div>
+                <div class="contactlogodiv">
+
+                  <div class="logo">
+                    <a  style="color: var(--colored-text-color);">
+                      <i class="fa-solid fa-phone-flip"></i></a>
+                    <p style="color: var(--text-color); font-weight: bold;">Call Me On</p>
+                    <p style="color: var(--text-color-for-currection);">+91 9205582846</p>
+                  </div>
+
+                  <div class="logo">
+                    <a style="color: var(--colored-text-color);">
+                      <i class="fa-solid fa-envelope"></i></a>
+                    <p style="color: var(--text-color); font-weight: bold;">E-mail Me On</p>
+                    <p style="color: var(--text-color-for-currection); word-wrap: break-word; overflow-wrap: break-word;">rahmanhusain899@gmail.com</p>
+                  </div> 
+
+                  <div class="logo">
+                    <a href="https://www.linkedin.com/in/rahman-husain-45bb60237/" target="_blank" style="color: var(--colored-text-color);">
+                      <i class="fa-brands fa-linkedin"></i></i></a>
+                    <p style="color: var(--text-color); font-weight: bold;">LinkedIn</p>
+                    <p style="color: var(--text-color-for-currection);">Rahman Husain</p>
+                  </div>
+
+                  <div class="logo">
+                    <a style="color: var(--colored-text-color);">
+                      <i class="fa-brands fa-whatsapp"></i></a>
+                    <p style="color: var(--text-color); font-weight: bold;">Whatsapp</p>
+                    <p style="color: var(--text-color-for-currection);">+91 9205582846</p>
+                  </div>
+
+                </div>
+
+                <div class="quetion">
+                  <h2 style="color: var(--colored-text-color); font-weight: bold;">SEND ME AN E-MAIL</h2>
+                  <p style="color: var(--text-color); font-weight: bold;">I'M VERY RESPONSIVE TO MESSAGES</p>
+                </div>
+
+                <!--form start-->
+                <div class="formconatiner">
+                  <form id="contactForm" onsubmit="submitForm(event)">
+
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
+                    <input type="text" id="subject" name="subject" required placeholder="Subject">
+                    <textarea  id="message" name="message" rows="4" required placeholder="Your Message Goes Here"></textarea>
+        
+                    <button id="submit" type="submit"><span id="submittext">Send Message</span> <span id="submitlogo"><i class="fa-solid fa-paper-plane"></i></span></button>
+                </form>
+                </div>
+                <!--form start-->
+
+             </div>
+          </section>
+            <!--contact Section end-->
+        </div>
+        <div class="outtbtn">
+        <div class="togglebtn" onclick="toggleanimation()">
+            <div class="tb" id="l1"></div>
+            <div class="tb" id="l2"></div>
+            <div class="tb" id="l3"></div>
+        </div>
+        </div>
+        <div class="Stylersout">
+          <div class="icons"><i class="fa-solid fa-circle-half-stroke" onclick="changemode()"></i></div>
+          <div class="icons" ><i class="fa-solid fa-gear" onclick="changesetting()"></i></div>
+        </div>
+        <div class="coloroptions">
+          <span class="colors selected" id="green" onclick="toggleColors(0,'--green','--greens')"><span class="cin" style="background-color: var(--green);"></span></span>
+          <span class="colors" id="violet" onclick="toggleColors(1,'--voilet','--voilets')"><span class="cin" style="background-color: var(--voilet);"></span></span>
+          <span class="colors" id="orange" onclick="toggleColors(2,'--orange','--oranges')"><span class="cin" style="background-color: var(--orange);"></span></span>
+          <span class="colors" id="red" onclick="toggleColors(3,'--red','--reds')"><span class="cin" style="background-color: var(--red);"></span></span>
+          <span class="colors" id="purple" onclick="toggleColors(4,'--purple','--purples')"><span class="cin" style="background-color: var(--purple);"></span></span>
+          <span class="colors" id="blue" onclick="toggleColors(5,'--blue','--blues')"><span class="cin" style="background-color: var(--blue);"></span></span>
+
+        </div>
+      </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
