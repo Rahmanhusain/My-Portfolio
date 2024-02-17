@@ -298,7 +298,6 @@ body{
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    transition: height 0.8s ease;
     
  }
  
@@ -312,6 +311,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+
  }
  .colors:nth-child(1){
     margin-top: 8px;
@@ -331,7 +331,7 @@ body{
     transform: translateY(-131px);
     transition-delay: 0.3s;
     background-color: var(--orange);
-
+    
 }
 #red{
     transform: translateY(-174px);
@@ -343,6 +343,7 @@ body{
     transform: translateY(-217px);
     transition-delay: 0.1s;
     background-color: var(--purple) ;
+
 }
 #blue{
     transform: translateY(-260px);
@@ -351,7 +352,6 @@ body{
 .cin{
     width: 1.6em;
     height: 1.6em;
-    align-self: center;
     border-radius: 50%;
    
 }

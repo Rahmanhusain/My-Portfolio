@@ -124,6 +124,10 @@ function toggleColors(index,colorVariable,stylercolorvariable) {
   spanst.forEach(function(span) {
     span.classList.toggle('add');
   });
+  
+   var rotate = document.querySelector(".icons:nth-child(2) i");
+   rotate.classList.toggle('rotate');
+
     var spans=document.querySelectorAll('.item-bars');
     spans.forEach(function(span) {
       span.style.backgroundColor = stylercolorValue;
