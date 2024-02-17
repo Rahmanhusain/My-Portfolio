@@ -302,19 +302,18 @@ body{
  }
  
  .colors{
+    margin: 0;
+    padding: 0;
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    margin-bottom: 8px;
+    margin-top: 8px;
     cursor: pointer;
     transition: transform 0.5s ease;
     display: flex;
     align-items: center;
     justify-content: center;
 
- }
- .colors:nth-child(1){
-    margin-top: 8px;
  }
 
  #green{
