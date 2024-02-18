@@ -151,8 +151,6 @@ var typed = new Typed('#intro', {
 //preloader
 var preloader = document.getElementById("loader");
 window.addEventListener("load", function(){
+  preloader.style.display = "none";
+  preloader = null;
 });
-
-  setTimeout(function() {
-    preloaderAnim();
-}, 1);
