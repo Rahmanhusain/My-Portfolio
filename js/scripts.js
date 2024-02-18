@@ -140,7 +140,7 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 }
 
 var typed = new Typed('#intro', {
-  strings: ['Computer Science Enthusiast', 'Computer Science Student', 'Programmer'],
+  strings: ['Computer Science Enthusiast', 'Computer Science Student', 'Programmer', 'Engineer'],
   typeSpeed: 100,
   backspeed: 60,
   loop: true,
