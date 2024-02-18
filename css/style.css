@@ -364,5 +364,60 @@ body{
  }
  
 /* nobile responsive nav Stylers End*/
+#loader{
+    position: fixed;
+    background-color: var(--body-back-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    row-gap: 30px;
+}
 
-
+#load1 {
+    width: 70px;
+    aspect-ratio: 1;
+    display: grid;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-right-color: var(--red);
+    animation: l15 1s infinite linear;
+  }
+  #load1::before,
+  #load1::after {    
+    content: "";
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+    animation: l15 2s infinite;
+  }
+  #load1::after {
+    margin: 8px;
+    animation-duration: 3s;
+  }
+  @keyframes l15{ 
+    100%{transform: rotate(1turn)}
+  }
+  
+  
+  
+  
+  /* HTML: <div class="loader"></div> */
+  #load2 {
+    width: fit-content;
+    color: var(--text-color);
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 20px;
+    clip-path: inset(0 3ch 0 0);
+    animation: l4 1s steps(4) infinite;
+    margin-left: 15px;
+  }
+  #load2:before {
+    content:"Loading..."
+  }
+  @keyframes l4 {to{clip-path: inset(0 -1ch 0 0)}}

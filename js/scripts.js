@@ -146,3 +146,13 @@ var typed = new Typed('#intro', {
   loop: true,
   smartBackspace: false
 });
+
+
+//preloader
+var preloader = document.getElementById("loader");
+window.addEventListener("load", function(){
+});
+
+  setTimeout(function() {
+    preloaderAnim();
+}, 1);
