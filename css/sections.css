@@ -93,7 +93,7 @@ p.hs{
 }
 #myphotodiv2{
     position: relative;
-    max-width: 70%; /* Make sure the image doesn't exceed the width of its container */
+    max-width: 70%;
     height: fit-content;
     display: flex;
     justify-content: center;
@@ -111,7 +111,7 @@ p.hs{
 }
 
 #myphoto{
-    max-width:100%; /* Make sure the image doesn't exceed the width of its container */
+    max-width:100%; 
     height: fit-content;
     border-radius: 10px;
     filter: grayscale(30%);
