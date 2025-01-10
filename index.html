@@ -18,9 +18,25 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   </head>
   <body>
-    <div id="loader">
-      <div id="load1"></div>
-      <div id="load2"></div>
+
+    <div class="redirect">
+      <!-- SVG Animation -->
+      <div class="svg-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="logo">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#ffdd57" stroke-width="5" stroke-dasharray="283" stroke-dashoffset="283">
+                  <animate attributeName="stroke-dashoffset" from="283" to="0" dur="2s" fill="freeze" />
+              </circle>
+              <path d="M30 50 L45 65 L70 35" fill="none" stroke="#ffdd57" stroke-width="5" stroke-dasharray="50" stroke-dashoffset="50">
+                  <animate attributeName="stroke-dashoffset" from="50" to="0" dur="1s" begin="1s" fill="freeze" />
+              </path>
+          </svg>
+      </div>
+
+      <h1>This page has been moved to <a href="https://rahmanfolio.vercel.app/" id="redirect-link">https://rahmanfolio.vercel.app/</a>.</h1>
+      <p>Redirecting in <span id="countdown">5</span> seconds...</p>
+      <p>If you are not redirected, <a href="https://rahmanfolio.vercel.app/">click here</a>.</p>
+  </div>
+
     </div>
 
     <div class="main-container">
@@ -79,9 +95,12 @@
               </div>
               <div class="photo">
                 <div id="myphotodiv2">
-                  <div id="myphotodiv">
+                  <div
+                    id="myphotodiv"
+                    style="background-color: var(--imgbackcolor)"
+                  >
                     <img
-                      src="images/Rahman_profile_photo.jpg"
+                      src="images/Rahman_profile_photo.png"
                       alt=""
                       id="myphoto"
                     />
@@ -176,13 +195,22 @@
                     rel="noopener noreferrer"
                     ><button>See my CV</button></a
                   >
-                  <button onclick="setActiveNav(3,false)">Hire me</button>
+                  <button onclick="gotoWhatsapp()">
+                    <i
+                      class="fa-brands fa-whatsapp"
+                      style="font-size: larger"
+                    ></i>
+                   Chat with Me
+                  </button>
                 </div>
               </div>
               <!--skill start-->
               <div class="skill-container">
-                <div style="position: relative; width: fit-content">
-                  <h2 style="color: var(--text-color)">Skills</h2>
+                <div style="position: relative; width: 100%; text-align: center">
+                  <h2 style="color: var(--text-color)">My Skills</h2>
+                  <p style="color: var(--text-color-for-currection); font-size: small;">
+                    I am Rahman Husain from Delhi, India. I am doing my bachelor in Computer Science Engineering and i will Graduate in year 2026. I a, working as Freelancer and i am available for Freelance work. I am always ready for challanges!
+                  </p>
                 </div>
                 <!--skill content start-->
                 <div class="skillrow">
@@ -971,11 +999,21 @@
               </div>
 
               <div class="logo">
-                <a style="color: var(--colored-text-color)">
+                <a
+                  href="mailto:rahmanhusain899@gmail.com"
+                  target="_blank"
+                  style="color: var(--colored-text-color)"
+                >
                   <i class="fa-solid fa-envelope"></i
                 ></a>
                 <p style="color: var(--text-color); font-weight: bold">
-                  E-mail Me On
+                  <a
+                    href="mailto:rahmanhusain899@gmail.com"
+                    target="_blank"
+                    style="color: var(--text-color)"
+                  >
+                    E-mail Me On
+                  </a>
                 </p>
                 <p
                   style="
@@ -984,6 +1022,7 @@
                     overflow-wrap: break-word;
                   "
                 >
+                
                   rahmanhusain899@gmail.com
                 </p>
               </div>
@@ -997,19 +1036,39 @@
                   <i class="fa-brands fa-linkedin"></i
                 ></a>
                 <p style="color: var(--text-color); font-weight: bold">
+                  <a
+                  href="https://www.linkedin.com/in/rahman-husain-45bb60237/"
+                  target="_blank"
+                  style="color: var(--text-color)"
+                >
                   LinkedIn
+                </a>
                 </p>
                 <p style="color: var(--text-color-for-currection)">
-                  Rahman Husain
+                 
+                    Rahman Husain
+                 
                 </p>
               </div>
 
               <div class="logo">
-                <a style="color: var(--colored-text-color)">
-                  <i class="fa-brands fa-whatsapp"></i
-                ></a>
+                <a
+                  href="https://wa.me/919205582846?text=Hello%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20potential%20project%20with%20you.%20Let%27s%20connect%20and%20explore%20how%20we%20can%20collaborate%21%20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="color: var(--colored-text-color)"
+                >
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
                 <p style="color: var(--text-color); font-weight: bold">
-                  Whatsapp
+                  <a
+                    href="https://wa.me/919205582846?text=Hello%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20potential%20project%20with%20you.%20Let%27s%20connect%20and%20explore%20how%20we%20can%20collaborate%21%20"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style="color: var(--text-color)"
+                  >
+                    Whatsapp Me</a
+                  >
                 </p>
                 <p style="color: var(--text-color-for-currection)">
                   +91 9205582846
@@ -1089,36 +1148,40 @@
       <div class="coloroptions">
         <span
           class="colors selected"
-          id="green"
-          onclick="toggleColors(0,'--green','--greens')"
-          ><span class="cin" style="background-color: var(--green)"></span
+          id="blue"
+          onclick="toggleColors(0,'--blue','--blues','--blueimg')"
+          ><span class="cin" style="background-color: var(--blue)"></span
         ></span>
         <span
           class="colors"
           id="violet"
-          onclick="toggleColors(1,'--voilet','--voilets')"
+          onclick="toggleColors(1,'--voilet','--voilets','--voiletimg')"
           ><span class="cin" style="background-color: var(--voilet)"></span
         ></span>
         <span
           class="colors"
           id="orange"
-          onclick="toggleColors(2,'--orange','--oranges')"
+          onclick="toggleColors(2,'--orange','--oranges','--orangeimg')"
           ><span class="cin" style="background-color: var(--orange)"></span
         ></span>
-        <span class="colors" id="red" onclick="toggleColors(3,'--red','--reds')"
+        <span
+          class="colors"
+          id="red"
+          onclick="toggleColors(3,'--red','--reds','--redimg')"
           ><span class="cin" style="background-color: var(--red)"></span
         ></span>
         <span
           class="colors"
           id="purple"
-          onclick="toggleColors(4,'--purple','--purples')"
+          onclick="toggleColors(4,'--purple','--purples','--purpleimg')"
           ><span class="cin" style="background-color: var(--purple)"></span
         ></span>
+
         <span
           class="colors"
-          id="blue"
-          onclick="toggleColors(5,'--blue','--blues')"
-          ><span class="cin" style="background-color: var(--blue)"></span
+          id="green"
+          onclick="toggleColors(5,'--green','--greens','--greenimg')"
+          ><span class="cin" style="background-color: var(--green)"></span
         ></span>
       </div>
     </div>

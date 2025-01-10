@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Kaushan+Script&family=Noto+Sans+JP:wght@500&family=Poppins:ital,wght@0,500;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
 :root {
-  --colored-text-color: #33cc66;
+  --colored-text-color: #3333ff;
   --Nav-back-color: #f8f8f8;
   --body-back-color: #ffffff;
   --text-color: black;
@@ -11,7 +11,7 @@
   --input-boundary: rgba(192, 192, 192, 0.4);
   --nav-boundary: rgba(192, 192, 192, 0.3);
   --toggle-btn-back-color: white;
-  --styler-back-color: hsl(140, 60%, 80%);
+  --styler-back-color: hsl(240, 100%, 90%);
   --purple: rgb(198, 17, 218);
   --voilet: #8100de;
   --orange: #ffcc00;
@@ -33,7 +33,16 @@
   --body-back-color-dark: #191d2b;
   --text-color-dark: #ffffff;
   --Nav-back-color-dark: hsl(0, 0%, 25%);
+  --imgbackcolor: rgba(51, 51, 255, 0.119);
   /* dark mode colors end*/
+
+  /* imnage back color*/
+  --purpleimg: rgba(216, 25, 237, 0.105);
+  --voiletimg: rgba(129, 0, 222, 0.105);
+  --orangeimg: rgba(255, 204, 0, 0.105);
+  --redimg: rgba(255, 0, 51, 0.105);
+  --greenimg: rgba(41, 163, 82, 0.105);
+  --blueimg: rgba(51, 51, 255, 0.105);
 }
 
 /*dark mode start*/
@@ -56,6 +65,120 @@
     border-color 0.8s ease;
 }
 
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  font-family: 'Arial', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+/* Container for the redirect message */
+.redirect {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.5s ease-in-out;
+max-width: 100%;
+  width: 500px; /* Limits the width on larger screens */
+  margin: 0 auto; /* Centers the container */
+}
+
+/* SVG Animation Container */
+.svg-container {
+  margin-bottom: 20px;
+}
+
+/* SVG Logo Animation */
+.logo {
+  width: 80px; /* Smaller size for mobile */
+  height: 80px; /* Smaller size for mobile */
+  animation: bounce 2s infinite;
+}
+
+/* Text Styles */
+h1 {
+  font-size: 1.5em; /* Smaller font size for mobile */
+  margin-bottom: 15px;
+  line-height: 1.4; /* Improves readability */
+}
+
+p {
+  font-size: 1em; /* Smaller font size for mobile */
+  margin-top: 10px;
+  line-height: 1.4; /* Improves readability */
+}
+
+a {
+  color: #ffdd57;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffbb00;
+  text-decoration: underline;
+}
+
+#countdown {
+  font-weight: bold;
+  color: #ffdd57;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+  .redirect {
+      padding-left: 15px; /* Smaller padding for mobile */
+      padding-right: 15px; /* Smaller padding for mobile */
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
+
+  h1 {
+      font-size: 1.3em; /* Even smaller font size for very small screens */
+  }
+
+  p {
+      font-size: 0.9em; /* Even smaller font size for very small screens */
+  }
+
+  .logo {
+      width: 60px; /* Smaller logo for very small screens */
+      height: 60px; /* Smaller logo for very small screens */
+  }
+}
+
 p,
 h3 {
   font-family: "Montserrat", sans-serif;
@@ -75,14 +198,10 @@ image {
 html {
   scroll-behavior: auto;
 }
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  background-color: var(--body-back-color);
-}
+
 .main-container {
   display: flex;
+  display: none;
   width: 100%;
 }
 .main-container .nav {
@@ -169,7 +288,7 @@ body {
 .outtbtn {
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: 4.1rem;
   left: 0;
   top: 0;
   background-color: var(--Nav-back-color);
@@ -192,11 +311,11 @@ body {
   z-index: 19;
 }
 .tb {
-  width: 28px;
-  height: 3px;
+  width: 30px;
+  height: 0.2rem;
   background-color: var(--colored-text-color);
-  margin-top: 2.5px;
-  margin-bottom: 2.5px;
+  margin-top: 0.17rem;
+  margin-bottom: 0.17rem;
 }
 #l1.toganim {
   position: absolute;
@@ -279,7 +398,7 @@ body {
   width: 50px;
   height: fit-content;
   right: 22px;
-  top: 75px;
+  top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -302,9 +421,8 @@ body {
 }
 
 #green {
-  transform: translateY(-45px);
+  transform: translateY(-260px);
   background-color: var(--green);
-  transition-delay: 0.5s;
 }
 #violet {
   transform: translateY(-88px);
@@ -327,8 +445,9 @@ body {
   background-color: var(--purple);
 }
 #blue {
-  transform: translateY(-260px);
+  transform: translateY(-45px);
   background-color: var(--blue);
+  transition-delay: 0.5s;
 }
 .cin {
   width: 1.6em;
