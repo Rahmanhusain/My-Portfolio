@@ -36,11 +36,11 @@ function setActiveNav(index, istrue) {
 }
 
 function gotoWhatsapp() {
-window.open(
-  "https://wa.me/919205582846?text=Hello%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20potential%20project%20with%20you.%20Let%27s%20connect%20and%20explore%20how%20we%20can%20collaborate%21%20",
-  "_blank",
-  "noopener,noreferrer"
-);
+  window.open(
+    "https://wa.me/919205582846?text=Hello%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20potential%20project%20with%20you.%20Let%27s%20connect%20and%20explore%20how%20we%20can%20collaborate%21%20",
+    "_blank",
+    "noopener,noreferrer"
+  );
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -135,9 +135,9 @@ function toggleColors(
   items[index].classList.add("selected");
   root.style.setProperty("--colored-text-color", colorValue);
   root.style.setProperty("--styler-back-color", stylercolorValue);
- console.log(imgbackcolorValue)
+  console.log(imgbackcolorValue);
   root.style.setProperty("--imgbackcolor", imgbackcolorValue);
- 
+
   var spanst = document.querySelectorAll(".colors");
   spanst.forEach(function (span) {
     span.classList.toggle("add");
@@ -173,21 +173,20 @@ var typed = new Typed("#intro", {
 
 //preloader
 
-
-let countdown = 5;
-const countdownElement = document.getElementById('countdown');
-const redirectUrl = 'https://rahmanfolio.vercel.app/'; // Replace with your desired URL
+let countdown = 6;
+const countdownElement = document.getElementById("countdown");
+const redirectUrl = "https://rahmanfolio.vercel.app/"; // Replace with your desired URL
 
 function updateCountdown() {
-    countdownElement.textContent = countdown;
-    if (countdown === 0) {
-        window.location.href = redirectUrl;
-    } else {
-        countdown--;
-        setTimeout(updateCountdown, 1000);
-    }
+  countdownElement.textContent = countdown;
+  if (countdown === 0) {
+    window.location.href = redirectUrl;
+  } else {
+    countdown--;
+    setTimeout(updateCountdown, 1000);
+  }
 }
 
-document.getElementById('redirect-link').href = redirectUrl;
+document.getElementById("redirect-link").href = redirectUrl;
 
 updateCountdown();
